@@ -1,0 +1,15 @@
+table{
+  padding: 0;
+  border: 0;
+}
+tbody td {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  /*background-size: 100px auto;*/
+  border: 1px solid white
+}
+
