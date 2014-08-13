@@ -1,4 +1,3 @@
-
 function Deck(tile){
   this.tile = tile;
   this.deckArray = [];
