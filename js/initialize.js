@@ -5,7 +5,6 @@ $(document).ready(function(){
   var deck = new Deck(tiles);
   var view = new View;
   var board = new Board;
-  // var logic = new GameLogic;
   var controller = new Controller(deck, view, board);
   controller.init()
 });

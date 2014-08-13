@@ -1,4 +1,3 @@
-
 function View(){}
 
 View.prototype = {

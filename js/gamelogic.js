@@ -21,22 +21,3 @@ function GameLogic(controller){
     }
   }
 }
-
-// GameLogic.prototype = {
-//   checkMatch: function(){
-//     debugger
-//     this.matchCount(this);
-//     var card1 = this.matchCount[0]
-//     var card2 = this.matchCount[1]
-//     if(card1.classList[1] === card2.classList[1]){
-//       controller.view.matchedCards(card1,card2)
-//     } else {
-//       controller.view.flipBack(card1, card2)
-//       matchCount = []
-//     }
-//   },
-//   matchCount: function(card){
-//     debugger
-//     this.matchCountArray.push(card);
-//   }
-// }
