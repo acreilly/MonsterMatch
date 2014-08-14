@@ -13,7 +13,7 @@ function GameLogic(controller){
       var card1 = matchCount[0]
       var card2 = matchCount[1]
 
-      if ( card1.classList[1] === card2.classList[1] && card1.classList[2] != card2.classList[2]) {
+      if ( card1.classList[1] === card2.classList[1] && card1.classList[0] != card2.classList[0]) {
 
         controller.view.matchedCards(card1,card2);
         gamelogic.cardCounter()
@@ -27,7 +27,6 @@ function GameLogic(controller){
 
       matchCount = []
       controller.view.flipBack(matchCount)
-
     }
   }
 

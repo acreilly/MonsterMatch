@@ -4,18 +4,19 @@ function Board(){
 
 Board.prototype = {
   buildBoard: function(deck){
-    $("td").addClass("card");
+    // $("td").addClass("card");
     var classCounter = 0;
-    // each jquery?
     for(var i = 0; i < deck.deckArray.length; i++){
-      var color = deck.deckArray[i]
-      $("td")[i].className += " " + color + " " + "c" + classCounter++
+      var identifier = deck.deckArray[i]
+      $("td")[i].className += " " + "c" + classCounter++ + " " + identifier
     }
   },
-  resetBoard: function(){
-    // see if I can just shuffle and build board again, if not
-    // remove all classes
-    // reset all classes
-    // OR overwrite classes classList[1]
+  resetBoard: function(deck){
+    for(var i = 0; i < deck.deckArray.length; i++){
+      var identifier = deck.deckArray[i]
+      var removeImgClass = $("td")[i].classList[1]
+      $("td")[i].classList.remove(removeImgClass)
+      $("td")[i].className += " " + identifier
+    }
   }
 }

@@ -20,8 +20,9 @@ Controller.prototype = {
   },
   gameOver: function(){
     this.logic.cardsLeft = 0;
-    debugger
+    this.deck.buildDeck()
     this.view.gameReset()
+    this.board.resetBoard(this.deck)
   },
   scoreBoard: function(){
 
