@@ -1,4 +1,4 @@
-function Controller(deck, view, board, logic){
+function Controller(deck, view, board){
   this.deck = deck;
   this.view = view;
   this.board = board;
@@ -20,6 +20,10 @@ Controller.prototype = {
   },
   gameOver: function(){
     this.logic.cardsLeft = 0;
+    debugger
     this.view.gameReset()
+  },
+  scoreBoard: function(){
+
   }
 }

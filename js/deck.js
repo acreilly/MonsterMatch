@@ -10,6 +10,8 @@ Deck.prototype = {
       this.deckArray.push(this.tile[i])
     }
     this.deckArray.sort(this.shuffleDeck);
+    console.log(this.deckArray)
+    debugger
   },
   shuffleDeck: function(a,b){
     return (Math.round(Math.random()) - 0.5);
