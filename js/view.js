@@ -9,6 +9,7 @@ View.prototype = {
 // $(this).css("background-color", this.classList[1])
 $(this).css("background-image", "url(" + this.classList[1] + ")")
 },
+
 flipBack: function(cardArray){
   $.each(cardArray, function(val, i){
     setTimeout(function(){
@@ -18,8 +19,16 @@ flipBack: function(cardArray){
 
   })
 },
+
 matchedCards: function(card1, card2){
   card1.style.visibility = "hidden"
   card2.style.visibility = "hidden"
+},
+
+gameReset: function(deck){
+  $.each($("td"), function(val, i){
+    i.style.backgroundImage = "none"
+    i.style.visibility = "visible"
+  })
 }
 }

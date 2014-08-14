@@ -17,5 +17,9 @@ Controller.prototype = {
   gameStart: function(){
     this.deck.buildDeck()
     this.board.buildBoard(this.deck)
+  },
+  gameOver: function(){
+    this.logic.cardsLeft = 0;
+    this.view.gameReset()
   }
 }
