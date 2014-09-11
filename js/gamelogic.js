@@ -14,27 +14,29 @@ function GameLogic(controller){
       var card2 = matchCount[1]
 
       if ( card1.classList[1] === card2.classList[1] && card1.classList[0] != card2.classList[0]) {
-
-        controller.view.matchedCards(card1,card2);
-        gamelogic.cardCounter()
-
-      } else {
-        controller.view.flipBack(matchCount);
-      }
-      controller.logic.matchCountArray = []
+      // MATCH
+      controller.view.matchedCards(card1,card2);
+      controller.score.matchScore();
+      gamelogic.cardCounter()
 
     } else {
-
-      matchCount = []
-      controller.view.flipBack(matchCount)
+      controller.score.mismatchScore();
+      controller.view.flipBack(matchCount);
     }
-  }
+    controller.logic.matchCountArray = []
 
-  this.cardCounter = function(){
-    this.cardsLeft += 2
-    if ( this.cardsLeft === this.controller.deck.deckArray.length){
-      alert("YOU WON")
-      this.controller.gameOver()
-    }
+  } else {
+
+    matchCount = []
+    controller.view.flipBack(matchCount)
   }
+}
+
+this.cardCounter = function(){
+  this.cardsLeft += 2
+  if ( this.cardsLeft === this.controller.deck.deckArray.length){
+    alert("COMPLETE! SCORE = " + $(".score span")[0].innerHTML + ".")
+    this.controller.gameOver()
+  }
+}
 }

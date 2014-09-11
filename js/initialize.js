@@ -3,6 +3,7 @@ $(document).ready(function(){
   var deck = new Deck(tiles);
   var view = new View;
   var board = new Board;
-  var controller = new Controller(deck, view, board);
+  var scoreController = new Score;
+  var controller = new Controller(deck, view, board, scoreController);
   controller.init()
 });
