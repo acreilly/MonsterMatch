@@ -4,7 +4,6 @@ function Board(){
 
 Board.prototype = {
   buildBoard: function(deck){
-    // $("td").addClass("card");
     var classCounter = 0;
     for(var i = 0; i < deck.deckArray.length; i++){
       var identifier = deck.deckArray[i]
