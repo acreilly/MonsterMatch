@@ -1,13 +1,21 @@
-function Board(deck){
-  this.deck = deck;
+function Board(){
+  this.boardSpaces = []
 }
 
 Board.prototype = {
-  buildBoard: function(){
-    $("td").addClass("card");
-    for(var i = 0; i < this.deck.deckArray.length; i++){
-      var color = this.deck.deckArray[i]
-      $("td")[i].className += " " + color
+  buildBoard: function(deck){
+    var classCounter = 0;
+    for(var i = 0; i < deck.deckArray.length; i++){
+      var identifier = deck.deckArray[i]
+      $("td")[i].className += " " + "c" + classCounter++ + " " + identifier
+    }
+  },
+  resetBoard: function(deck){
+    for(var i = 0; i < deck.deckArray.length; i++){
+      var identifier = deck.deckArray[i]
+      var removeImgClass = $("td")[i].classList[1]
+      $("td")[i].classList.remove(removeImgClass)
+      $("td")[i].className += " " + identifier
     }
   }
 }

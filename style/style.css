@@ -1,3 +1,21 @@
+body{
+font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.4)), color-stop(100%, rgba(0, 0, 0, 0.4))), url(../img/space.gif) repeat 0 0;
+}
+
+h1{
+font-size: 60px;
+text-transform: uppercase;
+color: rgba(255,255,255, 0.8);
+text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6600cc, 0 0 70px #6600cc, 0 0 80px #6600cc, 0 0 100px #6600cc, 0 0 150px #6600cc;
+}
+
+.score{
+  position: relative;
+  right: 0;
+}
+
 table{
   padding: 0;
   border: 0;
@@ -10,6 +28,6 @@ tbody td {
   -webkit-background-size: cover;
   background-size: cover;
   /*background-size: 100px auto;*/
-  border: 1px solid white
+  border: 2px solid #6600cc;
 }
 

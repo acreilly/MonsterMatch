@@ -1,15 +1,33 @@
+function Controller(deck, view, board, score){
+  this.deck = deck;
+  this.view = view;
+  this.board = board;
+  this.logic = new GameLogic(this);
+  this.score = score;
+}
 
-// function Controller(deck, view, logic){
-//   this.deck = deck;
-//   this.view = view;
-//   var self = this
-//   this.init = function(){
-//     this.deck.buildDeck()
-//     var board = new Board(this.deck)
-//     board.buildBoard()
-//     this.view.bindListeners()
-//     var matchCount = []
-//     $("td").on("click", logic.checkMatch(matchCount));
-//   }
-// }
+Controller.prototype = {
+  init: function(){
+    this.gameStart()
+    this.bindListeners()
+  },
+  bindListeners: function(){
+    $("td").on("click", this.view.flipCard);
+    $("td").on("click", this.logic.checkMatch);
+  },
+  gameStart: function(){
+    this.deck.buildDeck()
+    this.board.buildBoard(this.deck);
+    this.score.startScore();
+  },
+  gameOver: function(){
+    this.logic.cardsLeft = 0;
+    this.deck.buildDeck();
+    this.view.gameReset();
+    this.score.startScore();
+    this.board.resetBoard(this.deck);
+  },
+  scoreBoard: function(){
 
+  }
+}
