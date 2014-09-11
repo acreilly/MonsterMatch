@@ -6,4 +6,19 @@ $(document).ready(function(){
   var scoreController = new Score;
   var controller = new Controller(deck, view, board, scoreController);
   controller.init()
+
+  animateMe();
+
 });
+
+var animateMe = function(){
+  $(".monster span:gt(0)").hide();
+  $(".match span:gt(0)").hide();
+  $(".monster span").each(function(index) {
+    $(this).delay(200*index).fadeIn(200);
+  });
+
+  $(".match span").each(function(index) {
+    $(this).delay(200*index).fadeIn(200);
+  });
+}

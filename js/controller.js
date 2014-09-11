@@ -26,8 +26,5 @@ Controller.prototype = {
     this.view.gameReset();
     this.score.startScore();
     this.board.resetBoard(this.deck);
-  },
-  scoreBoard: function(){
-
   }
 }

@@ -1,33 +1,78 @@
 body{
-font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   color: white;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.4)), color-stop(100%, rgba(0, 0, 0, 0.4))), url(../img/space.gif) repeat 0 0;
 }
 
 h1{
-font-size: 60px;
-text-transform: uppercase;
-color: rgba(255,255,255, 0.8);
-text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6600cc, 0 0 70px #6600cc, 0 0 80px #6600cc, 0 0 100px #6600cc, 0 0 150px #6600cc;
+  font-size: 50px;
+  color: rgba(255,255,255, 0.8);
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6600cc, 0 0 70px #6600cc, 0 0 80px #6600cc, 0 0 100px #6600cc, 0 0 150px #6600cc;
+  padding: 0px 15px;
+}
+
+@-webkit-keyframes textPulse {
+  from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6600cc, 0 0 70px #6600cc, 0 0 80px #6600cc, 0 0 100px #6600cc, 0 0 150px #6600cc; }
+  50% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #6600cc, 0 0 50px #6600cc; }
+  to { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 50px #6600cc, 0 0 80px #6600cc, 0 0 100px #6600cc, 0 0 150px #6600cc, 0 0 200px #6600cc; }
+}
+
+.monster{
+  float: left;
+  position: relative;
+  left: 50px;
+}
+
+h1 span{
+  display: block;
+  -webkit-animation-name: textPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+
+}
+
+.match{
+  float: right;
+  position: relative;
+  top: 60px;
+  right: 50px;
 }
 
 .score{
+  text-transform: uppercase;
+  width: 630px;
   position: relative;
   right: 0;
+  text-align: right;
 }
 
 table{
   padding: 0;
   border: 0;
+  margin: 2vh 0;
 }
 tbody td {
   width: 100px;
   height: 100px;
-  background-color: black;
+  background-color: rgba(0,0,0,0.3);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  /*background-size: 100px auto;*/
   border: 2px solid #6600cc;
 }
 
+footer{
+  font-size: 10px;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+}
+
+footer a{
+  margin: 0 0 5px 0;
+  text-align: center;
+  text-decoration: none;
+  color: rgba(255,255,255,0.5);
+}
