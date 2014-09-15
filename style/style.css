@@ -19,13 +19,6 @@ h1{
 }
 
 
-.score{
-  top: 20px;
-}
-
-.monster{
-}
-
 h1 span{
   display: inline-block;
   font-size: 6vw;
@@ -45,9 +38,7 @@ h1 span{
 
 .score{
   text-transform: uppercase;
-  position: relative;
-  right: 30px;
-  text-align: right;
+  margin-bottom: 10px;
 }
 
 
